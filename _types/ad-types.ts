@@ -20,6 +20,9 @@ export interface AdData {
   company_name_home_page_community: string;
   link_home_page_community: string;
   image_home_page_community: string;
+  company_name_home_page_sport: string;
+  link_home_page_sport: string;
+  image_home_page_sport: string;
 }
 
 export interface AdResponse {

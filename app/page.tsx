@@ -28,7 +28,7 @@ export default async function HomePage() {
           url={adData?.link_billboard || "#"}
         />
       </div>
-      <HomePageCategoryServer categorySlug="sport" />
+      <HomePageCategoryServer categorySlug="sport" adData={adData} />
       <HomePageCategoryServer categorySlug="time-out" adData={adData} />
       <NewsletterSubscriptionComponent />
       <HomePageCategoryServer categorySlug="community" adData={adData} />

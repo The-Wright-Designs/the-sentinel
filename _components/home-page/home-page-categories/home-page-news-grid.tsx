@@ -15,7 +15,9 @@ const HomePageNewsGrid = ({
   adData,
 }: PostGridProps) => {
   const adCategories =
-    categorySlug === "time-out" || categorySlug === "community";
+    categorySlug === "time-out" ||
+    categorySlug === "community" ||
+    categorySlug === "sport";
   return (
     <div
       className={classNames(
@@ -100,28 +102,34 @@ const HomePageNewsGrid = ({
           </article>
         );
       })}
-      {(categorySlug === "time-out" || categorySlug === "community") && (
+      {adCategories && (
         <AdSpaceSquare
           src={
             categorySlug === "time-out"
               ? adData?.image_home_page_entertainment || ""
               : categorySlug === "community"
                 ? adData?.image_home_page_community || ""
-                : ""
+                : categorySlug === "sport"
+                  ? adData?.image_home_page_sport || ""
+                  : ""
           }
           alt={
             categorySlug === "time-out"
               ? adData?.company_name_home_page_entertainment || "Advertisement"
               : categorySlug === "community"
                 ? adData?.company_name_home_page_community || "Advertisement"
-                : "Advertisement"
+                : categorySlug === "sport"
+                  ? adData?.company_name_home_page_sport || "Advertisement"
+                  : "Advertisement"
           }
           url={
             categorySlug === "time-out"
               ? adData?.link_home_page_entertainment || "#"
               : categorySlug === "community"
                 ? adData?.link_home_page_community || "#"
-                : "#"
+                : categorySlug === "sport"
+                  ? adData?.link_home_page_sport || "#"
+                  : "#"
           }
         />
       )}

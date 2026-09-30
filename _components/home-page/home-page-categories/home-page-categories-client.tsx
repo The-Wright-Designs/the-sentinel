@@ -55,6 +55,8 @@ const HomePageCategoryClient = ({
             posts={posts}
             hoveredIndex={hoveredIndex}
             setHoveredIndex={setHoveredIndex}
+            adData={adData}
+            categorySlug={categorySlug}
           />
         )}
         {categorySlug === "time-out" && (
