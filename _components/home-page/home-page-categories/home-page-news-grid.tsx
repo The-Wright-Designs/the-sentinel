@@ -17,7 +17,9 @@ const HomePageNewsGrid = ({
   const adCategories =
     categorySlug === "time-out" ||
     categorySlug === "community" ||
-    categorySlug === "sport";
+    categorySlug === "sport" ||
+    categorySlug === "latest-news" ||
+    categorySlug === "real-estate";
   return (
     <div
       className={classNames(
@@ -111,7 +113,11 @@ const HomePageNewsGrid = ({
                 ? adData?.image_home_page_community || ""
                 : categorySlug === "sport"
                   ? adData?.image_home_page_sport || ""
-                  : ""
+                  : categorySlug === "latest-news"
+                    ? adData?.image_home_page_latest_news || ""
+                    : categorySlug === "real-estate"
+                      ? adData?.image_home_page_real_estate || ""
+                      : ""
           }
           alt={
             categorySlug === "time-out"
@@ -120,7 +126,13 @@ const HomePageNewsGrid = ({
                 ? adData?.company_name_home_page_community || "Advertisement"
                 : categorySlug === "sport"
                   ? adData?.company_name_home_page_sport || "Advertisement"
-                  : "Advertisement"
+                  : categorySlug === "latest-news"
+                    ? adData?.company_name_home_page_latest_news ||
+                      "Advertisement"
+                    : categorySlug === "real-estate"
+                      ? adData?.company_name_home_page_real_estate ||
+                        "Advertisement"
+                      : "Advertisement"
           }
           url={
             categorySlug === "time-out"
@@ -129,7 +141,11 @@ const HomePageNewsGrid = ({
                 ? adData?.link_home_page_community || "#"
                 : categorySlug === "sport"
                   ? adData?.link_home_page_sport || "#"
-                  : "#"
+                  : categorySlug === "latest-news"
+                    ? adData?.link_home_page_latest_news || "#"
+                    : categorySlug === "real-estate"
+                      ? adData?.link_home_page_real_estate || "#"
+                      : "#"
           }
         />
       )}

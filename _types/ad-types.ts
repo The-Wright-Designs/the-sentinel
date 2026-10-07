@@ -23,6 +23,12 @@ export interface AdData {
   company_name_home_page_sport: string;
   link_home_page_sport: string;
   image_home_page_sport: string;
+  company_name_home_page_latest_news: string;
+  link_home_page_latest_news: string;
+  image_home_page_latest_news: string;
+  company_name_home_page_real_estate: string;
+  link_home_page_real_estate: string;
+  image_home_page_real_estate: string;
 }
 
 export interface AdResponse {

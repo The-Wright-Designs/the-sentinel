@@ -48,6 +48,8 @@ const HomePageCategoryClient = ({
             posts={posts}
             hoveredIndex={hoveredIndex}
             setHoveredIndex={setHoveredIndex}
+            adData={adData}
+            categorySlug="latest-news"
           />
         )}
         {categorySlug === "sport" && (
@@ -82,6 +84,8 @@ const HomePageCategoryClient = ({
             posts={posts}
             hoveredIndex={hoveredIndex}
             setHoveredIndex={setHoveredIndex}
+            adData={adData}
+            categorySlug={categorySlug}
           />
         )}
       </>

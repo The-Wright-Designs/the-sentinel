@@ -20,7 +20,7 @@ export default async function HomePage() {
   return (
     <PageWrapper>
       <TopStoriesComponent />
-      <HomePageCategoryServer />
+      <HomePageCategoryServer adData={adData} />
       <div className="my-10">
         <AdSpaceBillboard
           src={adData?.image_billboard || ""}
@@ -32,7 +32,7 @@ export default async function HomePage() {
       <HomePageCategoryServer categorySlug="time-out" adData={adData} />
       <NewsletterSubscriptionComponent />
       <HomePageCategoryServer categorySlug="community" adData={adData} />
-      <HomePageCategoryServer categorySlug="real-estate" />
+      <HomePageCategoryServer categorySlug="real-estate" adData={adData} />
     </PageWrapper>
   );
 }
